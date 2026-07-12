@@ -11,6 +11,7 @@
   --vermillon-dark: #F0431E;
   --sain: #3FBF8F;
   --surveiller: #EBB13C;
+  --risque: #FF5C38;
 
   /* Espacements */
   --grid-max-width: 1180px;
@@ -24,11 +25,304 @@ body {
 }
 
 /* Typographie utilitaire */
-.font-display { font-family: 'Bricolage Grotesque', sans-serif; letter-spacing: -0.03em; }
-.font-mono { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; }
+.font-display { 
+    font-family: 'Bricolage Grotesque', sans-serif; letter-spacing: -0.03em;
+}
+.font-mono {
+    font-family: 'JetBrains Mono', monospace; text-transform: uppercase;
+}
 
 /* Animations */
 @media (prefers-reduced-motion: no-preference) {
   .cta-hover { transition: transform 0.3s cubic-bezier(.16,1,.3,1); }
   .cta-hover:hover { transform: translateY(-3px) scale(1.02); }
+}
+
+/* --- Utilities --- */
+.text-tertiary { color: var(--txt-tertiary); }
+.text-secondary { color: var(--txt-secondary); }
+.text-sain { color: var(--sain); }
+.text-surveiller { color: var(--surveiller); }
+.text-risque { color: var(--risque); }
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.dot-sain { background-color: var(--sain); }
+.dot-surveiller { background-color: var(--surveiller); }
+.dot-risque { background-color: var(--risque); }
+
+/* --- Dashboard Card --- */
+.dashboard-card-wrapper {
+    position: relative;
+    max-width: 400px;
+    margin-top: 40px;
+}
+
+.dashboard-card {
+    background-color: var(--ink-surface-2);
+    border: 1px solid var(--ink-surface-3);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+.card-header h2 {
+    font-size: 20px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.card-header p {
+    font-size: 10px;
+    letter-spacing: 0.05em;
+}
+
+/* Donut Chart */
+.donut-container {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0;
+}
+
+.donut-chart {
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+
+.circular-chart {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 250px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: var(--ink-surface-3);
+    stroke-width: 3.8;
+}
+
+.circle-sain {
+    fill: none;
+    stroke: var(--sain);
+    stroke-width: 3.8;
+    stroke-linecap: round;
+}
+
+.circle-surveiller {
+    fill: none;
+    stroke: var(--surveiller);
+    stroke-width: 3.8;
+    stroke-linecap: round;
+}
+
+.circle-risque {
+    fill: none;
+    stroke: var(--risque);
+    stroke-width: 3.8;
+    stroke-linecap: round;
+}
+
+.donut-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-inner .score {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.donut-inner .score-label {
+    font-size: 8px;
+    color: var(--txt-tertiary);
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+}
+
+.donut-inner .score-status {
+    font-size: 11px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* Stats Row */
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-label {
+    color: var(--txt-tertiary);
+    font-size: 11px;
+    font-weight: 400;
+}
+
+/* Trend Section */
+.trend-section {
+    margin-bottom: 32px;
+}
+
+.trend-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 40px;
+}
+
+.bar {
+    flex: 1;
+    border-radius: 2px 2px 0 0;
+}
+
+.bar-sain { background-color: var(--sain); }
+.bar-surveiller { background-color: var(--surveiller); }
+.bar-risque { background-color: var(--risque); }
+
+/* Client List */
+.client-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid var(--ink-surface-3);
+    padding-top: 24px;
+}
+
+.client-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.client-name {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.client-details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.badge-sain {
+    background-color: rgba(63, 191, 143, 0.1);
+    color: var(--sain);
+}
+
+.badge-surveiller {
+    background-color: rgba(235, 177, 60, 0.1);
+    color: var(--surveiller);
+}
+
+.badge-risque {
+    background-color: rgba(255, 92, 56, 0.1);
+    color: var(--risque);
+}
+
+/* Alert Box */
+.alert-box {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: rgba(22, 21, 27, 0.9);
+    border: 1px solid rgba(255, 92, 56, 0.3);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.alert-icon {
+    width: 24px;
+    height: 24px;
+    background-color: rgba(255, 92, 56, 0.2);
+    color: var(--risque);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.alert-text p {
+    margin: 0;
+}
+
+.alert-title {
+    font-size: 9px;
+    color: var(--txt-secondary);
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.alert-desc {
+    font-size: 12px;
+    color: var(--txt-primary);
+}
+
+.alert-desc b {
+    font-weight: 600;
+}
+
+.alert-time {
+    font-size: 10px;
+    color: var(--txt-tertiary);
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.alert-time .dot-sain {
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
 }
