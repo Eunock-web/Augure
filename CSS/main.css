@@ -18,18 +18,30 @@
   --gutter: 24px;
 }
 
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--ink-fond);
   color: var(--txt-primary);
   font-family: 'Hanken Grotesk', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typographie utilitaire */
 .font-display { 
-    font-family: 'Bricolage Grotesque', sans-serif; letter-spacing: -0.03em;
+    font-family: 'Bricolage Grotesque', sans-serif; 
+    letter-spacing: -0.03em;
 }
 .font-mono {
-    font-family: 'JetBrains Mono', monospace; text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace; 
+    text-transform: uppercase;
 }
 
 /* Animations */
@@ -44,10 +56,11 @@ body {
 .text-sain { color: var(--sain); }
 .text-surveiller { color: var(--surveiller); }
 .text-risque { color: var(--risque); }
+.text-vermillon { color: var(--vermillon); }
 
 .container{
-    margin-left: 11%;
-    margin-right: 11%;
+    padding-left: 11%;
+    padding-right: 11%;
 }
 
 /* --- Barre de navigation --- */
@@ -55,63 +68,181 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--txt-primary);
+}
+
+.nav-logo span {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .nav-links{
-
     display: flex;
-    gap: 20px;
+    gap: 28px;
 }
 
 .nav-links a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--txt-secondary);
+    transition: color 0.2s ease;
 }
 
+.nav-links a:hover{
+    color: var(--txt-primary);
+}
+
+/* Nav Actions (Connexion + Démo) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.link-login {
+    text-decoration: none;
+    color: var(--txt-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.link-login:hover {
+    color: var(--txt-primary);
+}
+
+/* ---- Hero ---- */
 .hero{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 20px;
+    grid-template-columns: 42% 1fr;
+    align-items: start;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 60px;
 }
 
+.left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 30px;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--txt-tertiary);
+    border: 1px solid var(--ink-surface-3);
+    border-radius: 50px;
+    padding: 6px 14px;
+    width: fit-content;
+    background-color: var(--ink-surface-2);
+}
+
+.tag-arrow {
+    color: var(--vermillon);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hero-headline h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.hero-headline .text-vermillon {
+    color: var(--vermillon);
+    font-style: italic;
+}
+
+.left-content > .text-secondary {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 420px;
+}
+
+.hero-sub {
+    font-size: 11px !important;
+    letter-spacing: 0.06em;
+}
+
+/* ---- Buttons ---- */
 .btn-group{
     display: flex;
     gap: 12px;
     align-items: center;
 }
 
-.btn-group button{
-    padding: 12px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--ink-surface-3);
+.btn-demo {
+    padding: 14px 22px;
+    border-radius: 10px;
+    border: none;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-}
-
-.btn-group :first-child{
-    background-color: var(--ink-surface-3);
-}
-
-.btn-group :last-child{
+    font-family: 'Hanken Grotesk', sans-serif;
     background-color: var(--vermillon);
+    color: var(--txt-primary);
+    transition: background-color 0.2s ease;
+}
+
+.btn-demo:hover {
+    background-color: var(--vermillon-dark);
+}
+
+.btn-demo.btn-sm {
+    padding: 10px 18px;
+    font-size: 12px;
+    border-radius: 8px;
 }
 
 .btn-product{
+    padding: 14px 22px;
+    border-radius: 10px;
+    border: 1px solid var(--ink-surface-3);
     background-color: transparent;
     color: var(--txt-primary);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Hanken Grotesk', sans-serif;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
+.btn-product:hover {
+    border-color: var(--txt-tertiary);
+    background-color: var(--ink-surface-2);
+}
 
+.btn-product .arrow {
+    margin-left: 4px;
+    font-size: 14px;
+}
+
+/* ---- Dots ---- */
 .dot {
     display: inline-block;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    margin-right: 8px;
+    margin-right: 6px;
+    flex-shrink: 0;
 }
 .dot-sain { background-color: var(--sain); }
 .dot-surveiller { background-color: var(--surveiller); }
@@ -120,8 +251,8 @@ body {
 /* --- Dashboard Card --- */
 .dashboard-card-wrapper {
     position: relative;
-    max-width: 750px;
-    margin-top: 40px;
+    width: 70%;
+    margin-top: 20px;
 }
 
 .dashboard-card {
@@ -129,33 +260,63 @@ body {
     border: 1px solid var(--ink-surface-3);
     border-radius: 16px;
     padding: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 80px rgba(255, 92, 56, 0.03);
     position: relative;
     z-index: 1;
 }
 
-.card-header h2 {
-    font-size: 20px;
-    margin-top: 4px;
-    font-weight: 500;
+/* Card Head */
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
 }
 
-.card-header p {
-    font-size: 10px;
-    letter-spacing: 0.05em;
+.title-status {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card-label {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    color: var(--txt-tertiary);
+    white-space: nowrap;
+    gap: 4px;
+}
+
+.status .dot {
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
 }
 
 /* Donut Chart */
 .donut-container {
     display: flex;
     justify-content: center;
-    margin: 32px 0;
+    margin: 16px 0;
 }
 
 .donut-chart {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
 }
 
 .circular-chart {
@@ -226,8 +387,8 @@ body {
 /* Stats Row */
 .stats-row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 32px;
+    justify-content: space-around;
+    margin-bottom: 20px;
     font-size: 12px;
     font-weight: 600;
 }
@@ -247,7 +408,7 @@ body {
 
 /* Trend Section */
 .trend-section {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .trend-header {
@@ -268,6 +429,7 @@ body {
 .bar {
     flex: 1;
     border-radius: 2px 2px 0 0;
+    transition: height 0.3s ease;
 }
 
 .bar-sain { background-color: var(--sain); }
@@ -278,9 +440,9 @@ body {
 .client-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     border-top: 1px solid var(--ink-surface-3);
-    padding-top: 24px;
+    padding-top: 16px;
 }
 
 .client-item {
@@ -303,24 +465,24 @@ body {
 }
 
 .badge {
-    padding: 4px 8px;
+    padding: 4px 10px;
     border-radius: 4px;
     font-size: 11px;
     font-weight: 500;
 }
 
 .badge-sain {
-    background-color: rgba(63, 191, 143, 0.1);
+    background-color: rgba(63, 191, 143, 0.12);
     color: var(--sain);
 }
 
 .badge-surveiller {
-    background-color: rgba(235, 177, 60, 0.1);
+    background-color: rgba(235, 177, 60, 0.12);
     color: var(--surveiller);
 }
 
 .badge-risque {
-    background-color: rgba(255, 92, 56, 0.1);
+    background-color: rgba(255, 92, 56, 0.12);
     color: var(--risque);
 }
 
@@ -329,49 +491,31 @@ body {
     position: absolute;
     top: -20px;
     right: -20px;
-    background-color: rgba(22, 21, 27, 0.9);
-    border: 1px solid rgba(255, 92, 56, 0.3);
+    background-color: rgba(22, 21, 27, 0.92);
+    border: 1px solid rgba(255, 92, 56, 0.25);
     border-radius: 12px;
     padding: 12px 16px;
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
     z-index: 10;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 }
 
 .alert-icon {
-    width: 24px;
-    height: 24px;
-    background-color: rgba(255, 92, 56, 0.2);
+    width: 28px;
+    height: 28px;
+    background-color: rgba(255, 92, 56, 0.15);
     color: var(--risque);
-    border-radius: 30%;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     font-size: 14px;
-}
-
-.card-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.title-status {
-    display: flex;
-    flex-direction: column;
-    line-height: 0.1;
-}
-
-.status {
-    display: flex;
-    align-items: center;
-    font-size: 0.8rem;
-    color: var(--txt-tertiary);
+    flex-shrink: 0;
 }
 
 .alert-text p {
@@ -381,8 +525,8 @@ body {
 .alert-title {
     font-size: 9px;
     color: var(--txt-secondary);
-    letter-spacing: 0.05em;
-    margin-bottom: 4px;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
 }
 
 .alert-desc {
@@ -406,4 +550,19 @@ body {
     width: 6px;
     height: 6px;
     margin-right: 4px;
+}
+
+/* ---- Hero Glow ---- */
+.hero-glow {
+    width: 100%;
+    height: 200px;
+    background: radial-gradient(ellipse 60% 100% at 50% 0%, rgba(255, 92, 56, 0.06) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 60% at 30% 0%, rgba(63, 191, 143, 0.04) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 60% at 70% 0%, rgba(235, 177, 60, 0.04) 0%, transparent 60%);
+    pointer-events: none;
+    margin-top: -100px;
+    position: relative;
+    right: -5%;
+    top: -20%;
+    transform: translate(-50%, -50%);
 }

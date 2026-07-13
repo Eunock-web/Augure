@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" description="Augure relie vos données CRM, produit et facturation pour prédire votre revenu au client près" >
-    <title>Augure</title>
+    <meta name="description" content="Augure relie vos données CRM, produit et facturation pour prédire votre revenu au client près" >
+    <title>Augure — Prévoyez votre revenu, retenez vos clients</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/main.css">
 </head>
 <body>
@@ -13,9 +16,12 @@
         <!--Barre de navigation-->
         <nav class="nav-bar">
             <!--Logo et nom de l'app-->
-            <div>
-                <h1 class="font-display">Augure</h1>
-            </div>
+            <a href="/" class="nav-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L4 8L12 22L20 8L12 2Z" fill="var(--vermillon)"/>
+                </svg>
+                <span class="font-display">Augure</span>
+            </a>
 
             <!--Lien de parcours du site-->
             <div class="nav-links">
@@ -26,14 +32,12 @@
             </div>
 
             <!--Bouton de connexion et d'inscription -->
-            <div class="btn-group">
-                <!--Bouton de connexion-->
-                <button class="btn-login">
-                    Connexion
-                </button>
+            <div class="nav-actions">
+                <!--Lien de connexion-->
+                <a href="#" class="link-login">Connexion</a>
 
                 <!--Bouton de d'inscription -->
-                <button class="btn-demo">
+                <button class="btn-demo btn-sm">
                     Demander une démo
                 </button>
             </div>
@@ -41,24 +45,22 @@
 
         <div class="hero">
             <div class="left-content">
-                <div class="font-mono">
-                    <p class="text-tertiary">REVOPS . PREVISION DE REVENUS</p>
-                </div>
-                <div>
-                    <h1>Prévoyez votre revenu.</h1>
-                    <h1 class="font-display"><span>Retenez</span> vos clients.</h1>
+                <span class="hero-tag font-mono"><span class="tag-arrow">‹</span> REVOPS · PRÉVISION DE REVENUS</span>
+                <div class="hero-headline">
+                    <h2>Prévoyez votre revenu.</h2>
+                    <h2 class="font-display"><span class="text-vermillon">Retenez</span> vos clients.</h2>
                 </div>
 
                 <p class="text-secondary">
                     Augure relie vos données CRM, produit et facturation pour prédire votre revenu au client près — et signaler les comptes à risque bien avant le renouvellement.
                 </p>
 
-                <div class="btn-group">
-                    <button class="btn-demo">Demander une démo</button>
-                    <button class="btn-product">Voir le produit</button>
+                <div class="btn-group hero-cta">
+                    <button class="btn-demo cta-hover">Demander une démo</button>
+                    <button class="btn-product cta-hover">Voir le produit <span class="arrow">↗</span></button>
                 </div>
 
-                <p class="font-mono text-tertiary">Sans carte bancaire . Déploiement en 2 semaines . SDC 2 Type II</p>
+                <p class="hero-sub font-mono text-tertiary">Sans carte bancaire · Déploiement en 2 semaines · SOC 2 Type II</p>
 
             </div>
 
@@ -77,11 +79,11 @@
                 <div class="dashboard-card">
                     <div class="card-head">
                         <div class="title-status">
-                            <p class="font-mono text-tertiary">PORTEFEUILLE CLIENTS</p>
-                            <h2>Santé & prévision</h2>
+                            <p class="font-mono text-tertiary card-label">PORTEFEUILLE CLIENTS</p>
+                            <h3 class="card-title">Santé & prévision</h3>
                         </div>
                         <div class="status">
-                            <span class="dot-sain"></span> MAJ : il y a 2 min
+                            <span class="dot dot-sain"></span> MAJ : il y a 2 min
                         </div>
                     </div>
 
@@ -189,6 +191,9 @@
             </div>
         </div>
     </header>
+
+    <!-- Séparateur lumineux -->
+    <div class="hero-glow"></div>
 
     <!-- Corp du site -->
     <main>
