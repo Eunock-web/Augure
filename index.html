@@ -1,26 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" description="Augure relie vos données CRM, produit et facturation pour prédire votre revenu au client près" >
-    <title>Augure</title>
+    <meta name="description" content="Augure relie vos données CRM, produit et facturation pour prédire votre revenu au client près">
+    <title>Augure — Prévoyez votre revenu, retenez vos clients</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/main.css">
 </head>
 <body>
-    <!-- En tête -->
-    <header>
-        
-    </header>
 
-    <!-- Corp du site -->
-    <main>
+<!-- ============ HEADER FIXE ============ -->
+<header data-header>
+    <div class="header-inner">
+        <a href="#top" class="nav-logo">
+            <span class="logo-icon">
+                <span class="logo-diamond"></span>
+            </span>
+            <span class="font-display">Augure</span>
+        </a>
+        <nav class="nav-links" data-nav-links>
+            <a href="#fonctionnalites">Fonctionnalités</a>
+            <a href="#produit">Produit</a>
+            <a href="#tarifs">Tarifs</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="#" class="link-login" data-header-sec>Connexion</a>
+            <a href="#demo" class="btn-demo btn-sm">Demander une démo</a>
+        </div>
+    </div>
+</header>
 
-    </main>
+<!-- ============ HERO ============ -->
+<section id="top" class="hero-section">
+    <!-- Glow vermillon haut-droite -->
+    <div class="hero-bg-glow"></div>
+    <!-- Grille de fond avec masque radial -->
+    <div class="hero-bg-grid"></div>
 
-    <!-- Pied de page -->
-    <footer>
+    <div class="hero-inner">
+        <!-- Contenu gauche -->
+        <div class="left-content">
+            <span class="hero-tag font-mono">
+                <span class="tag-pulse"></span>
+                RevOps · Prévision de revenus
+            </span>
 
-    </footer>
+            <h1 class="hero-title font-display">
+                Prévoyez votre revenu.<br>
+                <span class="text-vermillon">Retenez</span> vos clients.
+            </h1>
+
+            <p class="hero-desc text-secondary">
+                Augure relie vos données CRM, produit et facturation pour prédire votre revenu au client près — et signaler les comptes à risque bien avant le renouvellement.
+            </p>
+
+            <div class="btn-group hero-cta">
+                <a href="#demo" class="btn-demo cta-hover">Demander une démo</a>
+                <a href="#produit" class="btn-product cta-hover">Voir le produit <span class="arrow">↗</span></a>
+            </div>
+
+            <p class="hero-sub font-mono text-tertiary">Sans carte bancaire &nbsp;·&nbsp; Déploiement en 2 semaines &nbsp;·&nbsp; SOC&nbsp;2 Type&nbsp;II</p>
+        </div>
+
+        <!-- Dashboard card -->
+        <div class="dashboard-card-wrapper">
+            <!-- Chip d'alerte flottant -->
+            <div class="alert-box">
+                <div class="alert-icon">!</div>
+                <div class="alert-text">
+                    <p class="font-mono alert-title">ALERTE CHURN</p>
+                    <p class="alert-desc"><b>Northwind</b> · risque détecté</p>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <!-- Card head -->
+                <div class="card-head">
+                    <div class="card-head-top">
+                        <span class="font-mono text-tertiary card-label">PORTEFEUILLE CLIENTS</span>
+                        <span class="status font-mono">
+                            <span class="dot dot-sain live-dot"></span>
+                            MAJ · il y a 2 min
+                        </span>
+                    </div>
+                    <h3 class="card-title font-display">Santé &amp; prévision</h3>
+                </div>
+
+                <!-- Donut -->
+                <div class="donut-container">
+                    <div class="donut-chart">
+                        <div class="donut-ring"></div>
+                        <div class="donut-inner">
+                            <span class="score">74</span>
+                            <span class="score-label font-mono">SCORE GLOBAL · /100</span>
+                            <span class="score-status text-surveiller">À surveiller</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-value">
+                            <span class="stat-dot dot-sq" style="background:var(--sain)"></span>
+                            <span class="font-mono">62%</span>
+                        </div>
+                        <span class="stat-label">Sain</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">
+                            <span class="stat-dot dot-sq" style="background:var(--surveiller)"></span>
+                            <span class="font-mono">24%</span>
+                        </div>
+                        <span class="stat-label">À surveiller</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">
+                            <span class="stat-dot dot-sq" style="background:var(--risque)"></span>
+                            <span class="font-mono">14%</span>
+                        </div>
+                        <span class="stat-label">À risque</span>
+                    </div>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <!-- Tendance -->
+                <div class="trend-section">
+                    <div class="trend-header">
+                        <span class="font-mono text-tertiary">TENDANCE 90 J</span>
+                        <span class="font-mono text-sain">▲ +6 pts</span>
+                    </div>
+                    <div class="bar-chart">
+                        <div class="bar bar-risque"    style="height:40%"></div>
+                        <div class="bar bar-risque"    style="height:44%"></div>
+                        <div class="bar bar-surveiller" style="height:38%"></div>
+                        <div class="bar bar-surveiller" style="height:52%"></div>
+                        <div class="bar bar-surveiller" style="height:48%"></div>
+                        <div class="bar bar-surveiller" style="height:58%"></div>
+                        <div class="bar bar-sain"      style="height:50%"></div>
+                        <div class="bar bar-sain"      style="height:62%"></div>
+                        <div class="bar bar-sain"      style="height:55%"></div>
+                        <div class="bar bar-sain"      style="height:64%"></div>
+                        <div class="bar bar-sain"      style="height:60%"></div>
+                        <div class="bar bar-sain"      style="height:70%"></div>
+                        <div class="bar bar-sain"      style="height:58%"></div>
+                        <div class="bar bar-sain"      style="height:54%"></div>
+                        <div class="bar bar-sain"      style="height:66%"></div>
+                        <div class="bar bar-sain"      style="height:76%"></div>
+                    </div>
+                </div>
+
+                <!-- Liste clients -->
+                <div class="client-list">
+                    <div class="client-item">
+                        <div class="client-name"><span class="dot dot-sain"></span>Lumen Health</div>
+                        <div class="client-details">
+                            <span class="font-mono text-secondary">184 k€</span>
+                            <span class="badge badge-sain">Sain</span>
+                        </div>
+                    </div>
+                    <div class="client-item">
+                        <div class="client-name"><span class="dot dot-surveiller"></span>Cadravel</div>
+                        <div class="client-details">
+                            <span class="font-mono text-secondary">92 k€</span>
+                            <span class="badge badge-surveiller">À surveiller</span>
+                        </div>
+                    </div>
+                    <div class="client-item">
+                        <div class="client-name"><span class="dot dot-risque"></span>Northwind</div>
+                        <div class="client-details">
+                            <span class="font-mono text-secondary">210 k€</span>
+                            <span class="badge badge-risque">À risque</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Corp du site -->
+<main></main>
+
+<!-- Pied de page -->
+<footer></footer>
+
+<script src="./JS/main.js"></script>
 </body>
 </html>
