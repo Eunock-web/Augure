@@ -34,282 +34,547 @@
     </div>
 </header>
 
-<!-- HERO  -->
-<section id="top" class="hero-section">
-    <!-- Glow vermillon haut-droite -->
-    <div class="hero-bg-glow"></div>
-    <!-- Grille de fond avec masque radial -->
-    <div class="hero-bg-grid"></div>
+<main>
+    <!-- HERO  -->
+    <section id="top" class="hero-section">
+        <!-- Glow vermillon haut-droite -->
+        <div class="hero-bg-glow"></div>
+        <!-- Grille de fond avec masque radial -->
+        <div class="hero-bg-grid"></div>
 
-    <div class="hero-inner">
-        <!-- Contenu gauche -->
-        <div class="left-content">
-            <span class="hero-tag font-mono">
-                <span class="tag-pulse"></span>
-                RevOps · Prévision de revenus
-            </span>
+        <div class="hero-inner">
+            <!-- Contenu gauche -->
+            <div class="left-content">
+                <span class="hero-tag font-mono">
+                    <span class="tag-pulse"></span>
+                    RevOps · Prévision de revenus
+                </span>
 
-            <h1 class="hero-title font-display">
-                Prévoyez votre revenu.<br>
-                <span class="text-vermillon">Retenez</span> vos clients.
-            </h1>
+                <h1 class="hero-title font-display">
+                    Prévoyez votre revenu.<br>
+                    <span class="text-vermillon">Retenez</span> vos clients.
+                </h1>
 
-            <p class="hero-desc text-secondary">
-                Augure relie vos données CRM, produit et facturation pour prédire votre revenu au client près — et signaler les comptes à risque bien avant le renouvellement.
-            </p>
+                <p class="hero-desc text-secondary">
+                    Augure relie vos données CRM, produit et facturation pour prédire votre revenu au client près — et signaler les comptes à risque bien avant le renouvellement.
+                </p>
 
-            <div class="btn-group hero-cta">
-                <a href="#demo" class="btn-demo cta-hover">Demander une démo</a>
-                <a href="#produit" class="btn-product cta-hover">Voir le produit <span class="arrow">↗</span></a>
+                <div class="btn-group hero-cta">
+                    <a href="#demo" class="btn-demo cta-hover">Demander une démo</a>
+                    <a href="#produit" class="btn-product cta-hover">Voir le produit <span class="arrow">↗</span></a>
+                </div>
+
+                <p class="hero-sub font-mono text-tertiary">Sans carte bancaire &nbsp;·&nbsp; Déploiement en 2 semaines &nbsp;·&nbsp; SOC&nbsp;2 Type&nbsp;II</p>
             </div>
 
-            <p class="hero-sub font-mono text-tertiary">Sans carte bancaire &nbsp;·&nbsp; Déploiement en 2 semaines &nbsp;·&nbsp; SOC&nbsp;2 Type&nbsp;II</p>
+            <!-- Dashboard card -->
+            <div class="dashboard-card-wrapper">
+                <!-- Chip d'alerte flottant -->
+                <div class="alert-box">
+                    <div class="alert-icon">!</div>
+                    <div class="alert-text">
+                        <p class="font-mono alert-title">ALERTE CHURN</p>
+                        <p class="alert-desc"><b>Northwind</b> · risque détecté</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <!-- Card head -->
+                    <div class="card-head">
+                        <div class="card-head-top">
+                            <span class="font-mono text-tertiary card-label">PORTEFEUILLE CLIENTS</span>
+                            <span class="status font-mono">
+                                <span class="dot dot-sain live-dot"></span>
+                                MAJ · il y a 2 min
+                            </span>
+                        </div>
+                        <h3 class="card-title font-display">Santé &amp; prévision</h3>
+                    </div>
+
+                    <!-- Donut -->
+                    <div class="donut-container">
+                        <div class="donut-chart">
+                            <div class="donut-ring"></div>
+                            <div class="donut-inner">
+                                <span class="score">74</span>
+                                <span class="score-label font-mono">SCORE GLOBAL · /100</span>
+                                <span class="score-status text-surveiller">À surveiller</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-value">
+                                <span class="stat-dot dot-sq" style="background:var(--sain)"></span>
+                                <span class="font-mono">62%</span>
+                            </div>
+                            <span class="stat-label">Sain</span>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">
+                                <span class="stat-dot dot-sq" style="background:var(--surveiller)"></span>
+                                <span class="font-mono">24%</span>
+                            </div>
+                            <span class="stat-label">À surveiller</span>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">
+                                <span class="stat-dot dot-sq" style="background:var(--risque)"></span>
+                                <span class="font-mono">14%</span>
+                            </div>
+                            <span class="stat-label">À risque</span>
+                        </div>
+                    </div>
+
+                    <div class="card-divider"></div>
+
+                    <!-- Tendance -->
+                    <div class="trend-section">
+                        <div class="trend-header">
+                            <span class="font-mono text-tertiary">TENDANCE 90 J</span>
+                            <span class="font-mono text-sain">▲ +6 pts</span>
+                        </div>
+                        <div class="bar-chart">
+                            <div class="bar bar-risque"    style="height:40%"></div>
+                            <div class="bar bar-risque"    style="height:44%"></div>
+                            <div class="bar bar-surveiller" style="height:38%"></div>
+                            <div class="bar bar-surveiller" style="height:52%"></div>
+                            <div class="bar bar-surveiller" style="height:48%"></div>
+                            <div class="bar bar-surveiller" style="height:58%"></div>
+                            <div class="bar bar-sain"      style="height:50%"></div>
+                            <div class="bar bar-sain"      style="height:62%"></div>
+                            <div class="bar bar-sain"      style="height:55%"></div>
+                            <div class="bar bar-sain"      style="height:64%"></div>
+                            <div class="bar bar-sain"      style="height:60%"></div>
+                            <div class="bar bar-sain"      style="height:70%"></div>
+                            <div class="bar bar-sain"      style="height:58%"></div>
+                            <div class="bar bar-sain"      style="height:54%"></div>
+                            <div class="bar bar-sain"      style="height:66%"></div>
+                            <div class="bar bar-sain"      style="height:76%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Liste clients -->
+                    <div class="client-list">
+                        <div class="client-item">
+                            <div class="client-name"><span class="dot dot-sain"></span>Lumen Health</div>
+                            <div class="client-details">
+                                <span class="font-mono text-secondary">184 k€</span>
+                                <span class="badge badge-sain">Sain</span>
+                            </div>
+                        </div>
+                        <div class="client-item">
+                            <div class="client-name"><span class="dot dot-surveiller"></span>Cadravel</div>
+                            <div class="client-details">
+                                <span class="font-mono text-secondary">92 k€</span>
+                                <span class="badge badge-surveiller">À surveiller</span>
+                            </div>
+                        </div>
+                        <div class="client-item">
+                            <div class="client-name"><span class="dot dot-risque"></span>Northwind</div>
+                            <div class="client-details">
+                                <span class="font-mono text-secondary">210 k€</span>
+                                <span class="badge badge-risque">À risque</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Dashboard card -->
-        <div class="dashboard-card-wrapper">
-            <!-- Chip d'alerte flottant -->
-            <div class="alert-box">
-                <div class="alert-icon">!</div>
-                <div class="alert-text">
-                    <p class="font-mono alert-title">ALERTE CHURN</p>
-                    <p class="alert-desc"><b>Northwind</b> · risque détecté</p>
+    <!-- Logos -->
+    <section class="logos-section">
+        <div class="content-wrapper">
+            <p class="logos-eyebrow font-mono">Le revenu de +480 équipes RevOps piloté avec Augure</p>
+            <div class="logos-row">
+                <span class="logo-name font-display">Northbound</span>
+                <span class="logo-name font-display">Lumen</span>
+                <span class="logo-name font-display">Cadravel</span>
+                <span class="logo-name font-display">Sévère</span>
+                <span class="logo-name font-display">Volt</span>
+                <span class="logo-name font-display">Meridia</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fonctionnalités -->
+    <section id="fonctionnalites" class="features-section">
+        <div class="content-wrapper">
+            <div class="section-header">
+                <div class="section-eyebrow font-mono">Fonctionnalités</div>
+                <h2 class="section-title font-display">Tout ce qu'il faut pour ne plus jamais être surpris par un chiffre.</h2>
+            </div>
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="feature-diamond"></span></div>
+                    <div class="feature-num font-mono">01</div>
+                    <h3 class="feature-title font-display">Prévision au client près</h3>
+                    <p class="feature-body">Des forecasts par compte, segment et scénario, recalculés en continu — jamais figés dans un tableur.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="feature-diamond"></span></div>
+                    <div class="feature-num font-mono">02</div>
+                    <h3 class="feature-title font-display">Score de santé client</h3>
+                    <p class="feature-body">Un signal sain / à surveiller / à risque calculé sur 40+ signaux d'usage, de support et de facturation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="feature-diamond"></span></div>
+                    <div class="feature-num font-mono">03</div>
+                    <h3 class="feature-title font-display">Alertes anti-churn</h3>
+                    <p class="feature-body">Soyez prévenu dès qu'un compte décroche, des semaines avant le renouvellement, pas après.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="feature-diamond"></span></div>
+                    <div class="feature-num font-mono">04</div>
+                    <h3 class="feature-title font-display">Scénarios &amp; simulations</h3>
+                    <p class="feature-body">Modélisez best / worst case et l'impact d'une action commerciale avant de la lancer.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="feature-diamond"></span></div>
+                    <div class="feature-num font-mono">05</div>
+                    <h3 class="feature-title font-display">Pipeline pondéré</h3>
+                    <p class="feature-body">Un pipeline nettoyé et pondéré par la probabilité réelle de closing, pas par l'optimisme des commerciaux.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="feature-diamond"></span></div>
+                    <div class="feature-num font-mono">06</div>
+                    <h3 class="feature-title font-display">Intégrations natives</h3>
+                    <p class="feature-body">Salesforce, HubSpot, Stripe, Snowflake — synchronisés en quelques minutes, sans code.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Produit -->
+    <section id="produit" class="product-section">
+        <div class="content-wrapper">
+            <div class="section-header center">
+                <div class="section-eyebrow font-mono">Comment ça marche</div>
+                <h2 class="section-title font-display">De la donnée brute au signal, en trois étapes.</h2>
+            </div>
+
+            <div class="steps-row">
+                <div class="steps-line"></div>
+                
+                <div class="step-item">
+                    <div class="step-num font-mono">01</div>
+                    <h3 class="step-title font-display">Connectez vos sources</h3>
+                    <p class="step-body">CRM, facturation, produit, support. Aucune ligne de code, tout se branche en clics.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-num font-mono">02</div>
+                    <h3 class="step-title font-display">Augure calibre vos modèles</h3>
+                    <p class="step-body">Nos modèles apprennent votre cycle de vente et vos motifs de churn spécifiques.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-num font-mono">03</div>
+                    <h3 class="step-title font-display">Pilotez au signal</h3>
+                    <p class="step-body">Forecasts, alertes et priorités livrés à votre équipe chaque matin, prêts à l'action.</p>
                 </div>
             </div>
 
-            <div class="dashboard-card">
-                <!-- Card head -->
-                <div class="card-head">
-                    <div class="card-head-top">
-                        <span class="font-mono text-tertiary card-label">PORTEFEUILLE CLIENTS</span>
-                        <span class="status font-mono">
-                            <span class="dot dot-sain live-dot"></span>
-                            MAJ · il y a 2 min
-                        </span>
-                    </div>
-                    <h3 class="card-title font-display">Santé &amp; prévision</h3>
+            <!-- Capture produit -->
+            <div class="product-screenshot-wrapper">
+                <img src="./Images/forecast.png" alt="Augure App Forecast" class="product-screenshot">
+            </div>
+
+            <!-- Metrics -->
+            <div class="metrics-row">
+                <div class="metric-item">
+                    <div class="metric-value font-display">94 %</div>
+                    <div class="metric-label">de précision médiane du forecast trimestriel</div>
                 </div>
-
-                <!-- Donut -->
-                <div class="donut-container">
-                    <div class="donut-chart">
-                        <div class="donut-ring"></div>
-                        <div class="donut-inner">
-                            <span class="score">74</span>
-                            <span class="score-label font-mono">SCORE GLOBAL · /100</span>
-                            <span class="score-status text-surveiller">À surveiller</span>
-                        </div>
-                    </div>
+                <div class="metric-item">
+                    <div class="metric-value font-display">-31 %</div>
+                    <div class="metric-label">de churn sur les comptes suivis par Augure</div>
                 </div>
-
-                <!-- Stats -->
-                <div class="stats-row">
-                    <div class="stat-item">
-                        <div class="stat-value">
-                            <span class="stat-dot dot-sq" style="background:var(--sain)"></span>
-                            <span class="font-mono">62%</span>
-                        </div>
-                        <span class="stat-label">Sain</span>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">
-                            <span class="stat-dot dot-sq" style="background:var(--surveiller)"></span>
-                            <span class="font-mono">24%</span>
-                        </div>
-                        <span class="stat-label">À surveiller</span>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">
-                            <span class="stat-dot dot-sq" style="background:var(--risque)"></span>
-                            <span class="font-mono">14%</span>
-                        </div>
-                        <span class="stat-label">À risque</span>
-                    </div>
+                <div class="metric-item">
+                    <div class="metric-value font-display">3,2×</div>
+                    <div class="metric-label">de retour sur investissement dès la 1<sup>re</sup> année</div>
                 </div>
+                <div class="metric-item">
+                    <div class="metric-value font-display">480+</div>
+                    <div class="metric-label">équipes RevOps pilotent leur revenu avec nous</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="card-divider"></div>
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="content-wrapper">
+            <div class="section-header center">
+                <div class="section-eyebrow font-mono">Ce que disent les équipes</div>
+                <h2 class="section-title font-display">Des fondateurs et des équipes RevOps qui ont changé leur façon de piloter.</h2>
+            </div>
 
-                <!-- Tendance -->
-                <div class="trend-section">
-                    <div class="trend-header">
-                        <span class="font-mono text-tertiary">TENDANCE 90 J</span>
-                        <span class="font-mono text-sain">▲ +6 pts</span>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div>
+                        <div class="quote-mark">“</div>
+                        <p class="quote-text">Depuis qu'on utilise Augure, notre forecast trimestriel est fiable à 94% en moyenne. On arrête de courir après les chiffres et on commence à les anticiper.</p>
                     </div>
-                    <div class="bar-chart">
-                        <div class="bar bar-risque"    style="height:40%"></div>
-                        <div class="bar bar-risque"    style="height:44%"></div>
-                        <div class="bar bar-surveiller" style="height:38%"></div>
-                        <div class="bar bar-surveiller" style="height:52%"></div>
-                        <div class="bar bar-surveiller" style="height:48%"></div>
-                        <div class="bar bar-surveiller" style="height:58%"></div>
-                        <div class="bar bar-sain"      style="height:50%"></div>
-                        <div class="bar bar-sain"      style="height:62%"></div>
-                        <div class="bar bar-sain"      style="height:55%"></div>
-                        <div class="bar bar-sain"      style="height:64%"></div>
-                        <div class="bar bar-sain"      style="height:60%"></div>
-                        <div class="bar bar-sain"      style="height:70%"></div>
-                        <div class="bar bar-sain"      style="height:58%"></div>
-                        <div class="bar bar-sain"      style="height:54%"></div>
-                        <div class="bar bar-sain"      style="height:66%"></div>
-                        <div class="bar bar-sain"      style="height:76%"></div>
+                    <div class="quote-author">
+                        <div class="author-initials">AA</div>
+                        <div class="author-info">
+                            <div class="author-name">Alexis Albert</div>
+                            <div class="author-role">Fondateur, Northbound</div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Liste clients -->
-                <div class="client-list">
-                    <div class="client-item">
-                        <div class="client-name"><span class="dot dot-sain"></span>Lumen Health</div>
-                        <div class="client-details">
-                            <span class="font-mono text-secondary">184 k€</span>
-                            <span class="badge badge-sain">Sain</span>
+                <div class="testimonial-card">
+                    <div>
+                        <div class="quote-mark">“</div>
+                        <p class="quote-text">Le churn a baissé de 31% sur les comptes suivis par Augure. Le système nous alerte bien avant qu'un client ne soit vraiment en danger.</p>
+                    </div>
+                    <div class="quote-author">
+                        <div class="author-initials">ML</div>
+                        <div class="author-info">
+                            <div class="author-name">Marie Lefevre</div>
+                            <div class="author-role">VP Customer Success, Lumen</div>
                         </div>
                     </div>
-                    <div class="client-item">
-                        <div class="client-name"><span class="dot dot-surveiller"></span>Cadravel</div>
-                        <div class="client-details">
-                            <span class="font-mono text-secondary">92 k€</span>
-                            <span class="badge badge-surveiller">À surveiller</span>
-                        </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div>
+                        <div class="quote-mark">“</div>
+                        <p class="quote-text">Le ROI est clair : on génère 15-20% de revenus supplémentaires par trimestre en ciblant les bonnes opportunités au bon moment.</p>
                     </div>
-                    <div class="client-item">
-                        <div class="client-name"><span class="dot dot-risque"></span>Northwind</div>
-                        <div class="client-details">
-                            <span class="font-mono text-secondary">210 k€</span>
-                            <span class="badge badge-risque">À risque</span>
+                    <div class="quote-author">
+                        <div class="author-initials">JG</div>
+                        <div class="author-info">
+                            <div class="author-name">Julien Gautier</div>
+                            <div class="author-role">COO, Cadravel</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Logos -->
-<section class="logos-section">
-    <div class="content-wrapper">
-        <p class="logos-eyebrow font-mono">Le revenu de +480 équipes RevOps piloté avec Augure</p>
-        <div class="logos-row">
-            <span class="logo-name font-display">Northbound</span>
-            <span class="logo-name font-display">Lumen</span>
-            <span class="logo-name font-display">Cadravel</span>
-            <span class="logo-name font-display">Sévère</span>
-            <span class="logo-name font-display">Volt</span>
-            <span class="logo-name font-display">Meridia</span>
+    <!-- Pricing -->
+    <section id="tarifs" class="pricing-section">
+        <div class="content-wrapper">
+            <div class="section-header center">
+                <div class="section-eyebrow font-mono">Tarifs</div>
+                <h2 class="section-title font-display">Choisissez le plan adapté à la croissance de votre entreprise.</h2>
+            </div>
+
+            <div class="billing-toggle">
+                <button class="toggle-btn active" data-period="monthly">Mensuel</button>
+                <button class="toggle-btn" data-period="yearly">Annuel (-20%)</button>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="plan-name">Start</h3>
+                    <p class="plan-tagline">Idéal pour les équipes qui commencent à structurer leur prévisionnel.</p>
+                    <div class="plan-price">
+                        <span class="price-val monthly">0 €</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <a href="#demo" class="btn-plan outline">Commencer gratuitement</a>
+                    <ul class="plan-features">
+                        <li><span class="check">✔️</span> 50 comptes suivis</li>
+                        <li><span class="check">✔️</span> Prévision mensuelle</li>
+                        <li><span class="check">✔️</span> Scores de santé</li>
+                        <li><span class="check">✔️</span> 1 intégration connectée</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card highlighted">
+                    <div class="popular-badge">Le plus populaire</div>
+                    <h3 class="plan-name">Growth</h3>
+                    <p class="plan-tagline">Pour les entreprises en hyper-croissance qui veulent scaler leur RevOps.</p>
+                    <div class="plan-price">
+                        <span class="price-val monthly">599 €</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <a href="#demo" class="btn-plan solid">Commencer la démo</a>
+                    <ul class="plan-features">
+                        <li><span class="check">✔️</span> Comptes illimités</li>
+                        <li><span class="check">✔️</span> Prévision au client près</li>
+                        <li><span class="check">✔️</span> Alertes churn &amp; santé</li>
+                        <li><span class="check">✔️</span> 5+ intégrations</li>
+                        <li><span class="check">✔️</span> Scénarios &amp; simulations</li>
+                        <li><span class="check">✔️</span> Reporting exportable</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <h3 class="plan-name">Enterprise</h3>
+                    <p class="plan-tagline">La solution sur-mesure pour les grandes organisations et les équipes complexes.</p>
+                    <div class="plan-price">
+                        <span class="price-val monthly"> sur devis</span>
+                    </div>
+                    <a href="#demo" class="btn-plan outline">Contacter l'équipe</a>
+                    <ul class="plan-features">
+                        <li><span class="check">✔️</span> Tout le plan Growth</li>
+                        <li><span class="check">✔️</span> Support dédié &amp; SLA</li>
+                        <li><span class="check">✔️</span> Intégrations personnalisées</li>
+                        <li><span class="check">✔️</span> Modèles custom</li>
+                        <li><span class="check">✔️</span> Onboarding complet</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Fonctionnalités -->
-<section id="fonctionnalites" class="features-section">
-    <div class="content-wrapper">
-        <div class="section-header">
-            <div class="section-eyebrow font-mono">Fonctionnalités</div>
-            <h2 class="section-title font-display">Tout ce qu'il faut pour ne plus jamais être surpris par un chiffre.</h2>
-        </div>
-        <div class="features-grid">
 
-            <div class="feature-card">
-                <div class="feature-icon"><span class="feature-diamond"></span></div>
-                <div class="feature-num font-mono">01</div>
-                <h3 class="feature-title font-display">Prévision au client près</h3>
-                <p class="feature-body">Des forecasts par compte, segment et scénario, recalculés en continu — jamais figés dans un tableur.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon"><span class="feature-diamond"></span></div>
-                <div class="feature-num font-mono">02</div>
-                <h3 class="feature-title font-display">Score de santé client</h3>
-                <p class="feature-body">Un signal sain / à surveiller / à risque calculé sur 40+ signaux d'usage, de support et de facturation.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon"><span class="feature-diamond"></span></div>
-                <div class="feature-num font-mono">03</div>
-                <h3 class="feature-title font-display">Alertes anti-churn</h3>
-                <p class="feature-body">Soyez prévenu dès qu'un compte décroche, des semaines avant le renouvellement, pas après.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon"><span class="feature-diamond"></span></div>
-                <div class="feature-num font-mono">04</div>
-                <h3 class="feature-title font-display">Scénarios &amp; simulations</h3>
-                <p class="feature-body">Modélisez best / worst case et l'impact d'une action commerciale avant de la lancer.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon"><span class="feature-diamond"></span></div>
-                <div class="feature-num font-mono">05</div>
-                <h3 class="feature-title font-display">Pipeline pondéré</h3>
-                <p class="feature-body">Un pipeline nettoyé et pondéré par la probabilité réelle de closing, pas par l'optimisme des commerciaux.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon"><span class="feature-diamond"></span></div>
-                <div class="feature-num font-mono">06</div>
-                <h3 class="feature-title font-display">Intégrations natives</h3>
-                <p class="feature-body">Salesforce, HubSpot, Stripe, Snowflake — synchronisés en quelques minutes, sans code.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Produit -->
-<section id="produit" class="product-section">
-    <div class="content-wrapper">
+<!-- FAQ -->
+<section id="faq" class="faq-section">
+    <div class="faq-wrapper">
         <div class="section-header center">
-            <div class="section-eyebrow font-mono">Comment ça marche</div>
-            <h2 class="section-title font-display">De la donnée brute au signal, en trois étapes.</h2>
+            <div class="section-eyebrow font-mono">Foire aux questions</div>
+            <h2 class="section-title font-display">Les réponses aux questions les plus fréquentes sur Augure.</h2>
         </div>
 
-        <div class="steps-row">
-            <div class="steps-line"></div>
-            
-            <div class="step-item">
-                <div class="step-num font-mono">01</div>
-                <h3 class="step-title font-display">Connectez vos sources</h3>
-                <p class="step-body">CRM, facturation, produit, support. Aucune ligne de code, tout se branche en clics.</p>
+        <div class="faq-list">
+            <div class="faq-item" data-faq>
+                <button class="faq-btn" aria-expanded="false">
+                    <span class="faq-question font-display">Combien de temps faut-il pour déployer Augure ?</span>
+                    <div class="faq-icon">
+                        <div class="h-line"></div>
+                        <div class="v-line"></div>
+                    </div>
+                </button>
+                <div class="faq-content">
+                    <div>
+                        <p>En général, une équipe connecte ses sources et obtient ses premiers forecasts fiables en 1 à 2 semaines. Tout dépend du nombre de systèmes à intégrer, mais nos connecteurs natifs simplifient énormément le processus.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="step-item">
-                <div class="step-num font-mono">02</div>
-                <h3 class="step-title font-display">Augure calibre vos modèles</h3>
-                <p class="step-body">Nos modèles apprennent votre cycle de vente et vos motifs de churn spécifiques.</p>
+            <div class="faq-item" data-faq>
+                <button class="faq-btn" aria-expanded="false">
+                    <span class="faq-question font-display">Augure remplace-t-il notre CRM ou notre outil de BI ?</span>
+                    <div class="faq-icon">
+                        <div class="h-line"></div>
+                        <div class="v-line"></div>
+                    </div>
+                </button>
+                <div class="faq-content">
+                    <div>
+                        <p>Non, Augure est conçu pour fonctionner par-dessus vos outils existants. Il se connecte à votre CRM, votre BI, votre facturation, etc., pour enrichir vos données et ajouter une couche de prévision et d'alerte.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="step-item">
-                <div class="step-num font-mono">03</div>
-                <h3 class="step-title font-display">Pilotez au signal</h3>
-                <p class="step-body">Forecasts, alertes et priorités livrés à votre équipe chaque matin, prêts à l'action.</p>
+            <div class="faq-item" data-faq>
+                <button class="faq-btn" aria-expanded="false">
+                    <span class="faq-question font-display">Nos données restent-elles sécurisées ?</span>
+                    <div class="faq-icon">
+                        <div class="h-line"></div>
+                        <div class="v-line"></div>
+                    </div>
+                </button>
+                <div class="faq-content">
+                    <div>
+                        <p>Oui. Augure est certifié SOC 2 Type II, chiffre les données au repos et en transit, et propose SSO/SAML ainsi qu'un choix de région d'hébergement sur les offres Entreprise.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Capture produit -->
-        <div class="product-screenshot-wrapper">
-            <img src="./Images/forecast.png" alt="Augure App Forecast" class="product-screenshot">
-        </div>
-
-        <!-- Metrics -->
-        <div class="metrics-row">
-            <div class="metric-item">
-                <div class="metric-value font-display">94 %</div>
-                <div class="metric-label">de précision médiane du forecast trimestriel</div>
-            </div>
-            <div class="metric-item">
-                <div class="metric-value font-display">-31 %</div>
-                <div class="metric-label">de churn sur les comptes suivis par Augure</div>
-            </div>
-            <div class="metric-item">
-                <div class="metric-value font-display">3,2×</div>
-                <div class="metric-label">de retour sur investissement dès la 1<sup>re</sup> année</div>
-            </div>
-            <div class="metric-item">
-                <div class="metric-value font-display">480+</div>
-                <div class="metric-label">équipes RevOps pilotent leur revenu avec nous</div>
+            <div class="faq-item" data-faq>
+                <button class="faq-btn" aria-expanded="false">
+                    <span class="faq-question font-display">Que se passe-t-il à la fin de l'essai ?</span>
+                    <div class="faq-icon">
+                        <div class="h-line"></div>
+                        <div class="v-line"></div>
+                    </div>
+                </button>
+                <div class="faq-content">
+                    <div>
+                        <p>Rien d'automatique : aucune carte n'est demandée pour l'essai. Vous choisissez de continuer sur l'offre qui vous convient, et vos données restent exportables à tout moment.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- CTA FINAL  -->
+<section id="demo" class="final-cta-section">
+    <div class="content-wrapper">
+        <div class="final-cta-card">
+            <div class="final-cta-glow"></div>
+            <div class="final-cta-content">
+                <h2 class="final-cta-title font-display">Arrêtez de deviner votre revenu.</h2>
+                <p class="final-cta-desc">Voyez en 30 minutes comment Augure prédit votre trimestre et repère vos comptes à risque — sur vos données.</p>
+            </div>
+            <div class="final-cta-actions">
+                <a href="#" class="btn-demo">Demander une démo</a>
+                <a href="#" class="btn-product">Parler à un expert</a>
+                <p class="reply-time font-mono">Réponse sous 24 h ouvrées</p>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="content-wrapper">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#top" class="nav-logo">
+                    <span class="logo-icon"><span class="logo-diamond"></span></span>
+                    <span class="font-display">Augure</span>
+                </a>
+                <p class="footer-desc">La prévision de revenus et la santé client, réunies pour les équipes RevOps.</p>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title font-mono">Produit</div>
+                <div class="footer-links">
+                    <a href="#">Fonctionnalités</a>
+                    <a href="#">Prévision</a>
+                    <a href="#">Score de santé</a>
+                    <a href="#">Intégrations</a>
+                    <a href="#">Sécurité</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title font-mono">Ressources</div>
+                <div class="footer-links">
+                    <a href="#">Documentation</a>
+                    <a href="#">Guide RevOps</a>
+                    <a href="#">Études de cas</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Statut</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title font-mono">Entreprise</div>
+                <div class="footer-links">
+                    <a href="#">À propos</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Carrières</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="copyright font-mono">© 2026 Augure SAS · Fait à Paris</span>
+            <div class="legal-links font-mono">
+                <a href="#">Confidentialité</a>
+                <a href="#">CGU</a>
+                <a href="#">Statut</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="./JS/main.js"></script>
 </body>
