@@ -15,6 +15,8 @@
   --surveiller: #EBB13C;
   --risque: #FF5C38;
   --vermillon: #FF5C38;
+  --disp: 'Bricolage Grotesque', sans-serif;
+  --body: 'Hanken Grotesk', sans-serif;
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -651,7 +653,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 
-testimonials-section {
+.testimonials-section {
   padding: clamp(72px, 10vw, 120px) 0;
 }
 
